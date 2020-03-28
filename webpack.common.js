@@ -20,8 +20,8 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'build/js'),
+    filename: 'js/[name].[hash].js',
+    path: path.resolve(__dirname, 'build'),
   },
 
   resolve: {
@@ -34,15 +34,15 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../css/[name].[contenthash].css',
+      filename: 'css/[name].[hash].css',
     }),
     new HTMLWebpackPlugin({
-      filename: '../sales.html',
+      filename: 'sales.html',
       template: './src/views/sales/sales.html',
       chunks: ['sales', 'common'],
     }),
     new HTMLWebpackPlugin({
-      filename: '../index.html',
+      filename: 'index.html',
       template: './src/views/index/index.html',
       chunks: ['index', 'common'],
     }),
@@ -50,6 +50,13 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.scss$/i,
         use: [
@@ -72,13 +79,18 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jp(e)g)$/,
-        use: ['file-loader'],
+        loader: 'file-loader',
+        options: {
+          name: 'img/[hash].[ext]',
+          publicPath: '../',
+        },
       },
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
+        test: /\.(woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: './fonts/[name].[ext]',
+          publicPath: '../',
         },
       },
     ],

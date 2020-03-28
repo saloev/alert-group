@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'PTSerif';
+  src: url($font-path + '/PTSerif-Regular.woff2') format('woff2'),
+    url($font-path + '/PTSerif-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif';
+  src: url($font-path + '/PTSerif-Bold.woff2') format('woff2'),
+    url($font-path + '/PTSerif-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url($font-path + '/GothamPro.woff2') format('woff2'),
+    url($font-path + '/GothamPro.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url($font-path + '/GothamPro-Bold.woff2') format('woff2'),
+    url($font-path + '/GothamPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
