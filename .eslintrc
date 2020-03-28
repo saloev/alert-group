@@ -9,6 +9,7 @@
         "devDependencies": ["webpack.*.js"] 
       }
     ],
-    "no-console": "off" // TODO set to true on production
+    "no-console": "off", // TODO set to true on production,
+    "no-unused-vars": "off"
   }
 }

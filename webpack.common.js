@@ -1,6 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NodeSass = require('node-sass');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require('path');
 
 module.exports = {
@@ -44,10 +45,15 @@ module.exports = {
       template: './src/views/index/index.html',
       chunks: ['index', 'common'],
     }),
+    new VueLoaderPlugin(),
   ],
 
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
@@ -71,6 +77,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               implementation: NodeSass,
+              prependData: '@import "~@/scss/var.scss";',
             },
           },
         ],
