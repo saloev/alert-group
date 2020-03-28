@@ -83,3 +83,17 @@ $nav-height: calc(100% - #{$header-size + $default-size});
     background-color: $content-bg;
   }
 }
+
+.header {
+  &__logo,
+  &__link-to-form {
+    margin-left: auto;
+  }
+
+  &__logo {
+    font-size: 30px;
+    line-height: 1.2;
+
+    transform: translate(50%);
+  }
+}
