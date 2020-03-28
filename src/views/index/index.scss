@@ -1,0 +1,55 @@
+$advantages-space: 20px;
+
+.advantages {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $advantages-space;
+  }
+
+  &__item {
+    &-link {
+      display: block;
+      padding: $advantages-space;
+      overflow: hidden;
+
+      background: linear-gradient(
+          0deg,
+          rgba(30, 30, 30, 0.1),
+          rgba(30, 30, 30, 0.1)
+        ),
+        #494949;
+      border-radius: 10px;
+
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        .advantages__item {
+          &-content {
+            transform: translateY(0);
+          }
+          &-text {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-content {
+      transform: translateY(90%);
+      transition: 0.3s ease-in-out transform;
+      will-change: transform;
+    }
+
+    &-title {
+      margin-bottom: $advantages-space;
+    }
+
+    &-text {
+      opacity: 0;
+      transition: 0.3s ease-in-out opacity 0.3s;
+      will-change: opacity;
+    }
+  }
+}

@@ -3,6 +3,7 @@ $default-size: 60px;
 $header-size: 80px;
 $content-bg: #2f2e2d;
 $content-space: 20px;
+$content-space--top: 100px;
 $nav-height: calc(100% - #{$header-size + $default-size});
 
 .main-layout {
@@ -76,7 +77,7 @@ $nav-height: calc(100% - #{$header-size + $default-size});
   }
 
   &__content {
-    padding: $content-space;
+    padding: $content-space--top $content-space;
     height: 100%;
     overflow: auto;
 
@@ -93,6 +94,8 @@ $nav-height: calc(100% - #{$header-size + $default-size});
   &__logo {
     font-size: 30px;
     line-height: 1.2;
+    text-decoration: none;
+    color: #000;
 
     transform: translate(50%);
   }

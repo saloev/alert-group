@@ -34,11 +34,16 @@ p {
   margin: 0;
   margin-bottom: 20px;
 
+  font-size: 18px;
+  line-height: 28px;
   color: #fff;
 }
 
 h1 {
   margin-bottom: 30px;
+
+  font-size: 40px;
+  line-height: 60px;
 }
 
 h2 {
@@ -48,13 +53,14 @@ h2 {
 h1,
 h2 {
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 h3 {
   font-weight: 700;
 }
 
-a {
+a:not([class]) {
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
