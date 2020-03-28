@@ -27,11 +27,14 @@ h6 {
   margin: 0;
 
   font-family: 'GothamPro', sans-serif;
+  color: #fff;
 }
 
 p {
   margin: 0;
   margin-bottom: 20px;
+
+  color: #fff;
 }
 
 h1 {
@@ -49,4 +52,20 @@ h2 {
 
 h3 {
   font-weight: 700;
+}
+
+a {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $link-color;
+
+  transition: opacity 0.3 linear;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }

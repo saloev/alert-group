@@ -1,0 +1,80 @@
+$layout-bg: #fff;
+$default-size: 60px;
+$header-size: 80px;
+$content-bg: #2f2e2d;
+$content-space: 20px;
+$nav-height: calc(100% - #{$header-size + $default-size});
+
+.main-layout {
+  position: relative;
+
+  height: 100vh;
+  padding: $default-size;
+  padding-top: $header-size;
+  overflow: auto;
+
+  &__header,
+  &__footer,
+  &__left-nav,
+  &__right-nav {
+    position: absolute;
+    z-index: 10;
+
+    padding: $content-space;
+    display: flex;
+    align-items: center;
+
+    background: $layout-bg;
+  }
+
+  &__header,
+  &__footer {
+    left: 0;
+
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  &__left-nav,
+  &__right-nav {
+    top: $header-size;
+
+    min-width: $default-size;
+    min-height: $nav-height;
+
+    a {
+      display: block;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__header {
+    top: 0;
+    left: 0;
+
+    min-height: $header-size;
+  }
+
+  &__footer {
+    bottom: 0;
+    left: 0;
+
+    min-height: $default-size;
+  }
+
+  &__left-nav {
+    left: 0;
+  }
+
+  &__right-nav {
+    right: 0;
+  }
+
+  &__content {
+    padding: $content-space;
+    min-height: 100%;
+
+    background-color: $content-bg;
+  }
+}
