@@ -1,0 +1,9 @@
+node_modules
+/dist
+/build
+
+# Log files
+npm-debug.log*
+
+# Editor directories and files
+.vscode
