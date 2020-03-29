@@ -17,5 +17,10 @@
   }
 
   &--shadow {
+    box-shadow: 0px 10px 20px rgba(199, 133, 85, 0.2);
+  }
+
+  &--block {
+    width: 100%;
   }
 }

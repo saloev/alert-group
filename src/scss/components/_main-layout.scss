@@ -82,6 +82,10 @@ $nav-height: calc(100% - #{$header-size + $default-size});
     overflow: auto;
 
     background-color: $content-bg;
+
+    &--with-bg {
+      // background-image: url('./assets/images/home-bg.jpg');
+    }
   }
 }
 

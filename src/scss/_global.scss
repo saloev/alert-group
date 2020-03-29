@@ -77,6 +77,13 @@ a:not([class]) {
 }
 
 button,
-input {
+input,
+label {
   font-family: inherit;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
 }

@@ -1,0 +1,35 @@
+.sales {
+  &__title {
+    text-align: center;
+  }
+}
+
+.form {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  &__input {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    border: 0;
+    border-radius: 2px;
+
+    color: #606060;
+
+    &:focus {
+      outline-color: $primary;
+    }
+
+    &-label-checkbox {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__submit-btn {
+    margin-bottom: 50px;
+  }
+}

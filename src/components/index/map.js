@@ -27,6 +27,9 @@ const hideLoader = () => {
 };
 
 const initMap = () => {
+  if (!isMapLoaded) {
+    window.removeEventListener('scroll', pageScrolled);
+  }
   isMapLoaded = true;
 
   const myMap = new ymaps.Map('map', {
