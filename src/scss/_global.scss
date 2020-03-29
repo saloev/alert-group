@@ -44,6 +44,11 @@ h1 {
 
   font-size: 40px;
   line-height: 60px;
+
+  @include md-and-down() {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
 h2 {

@@ -7,3 +7,7 @@ $icons-path: '../assets/icons';
 $main--bg-color: #2f2e2d;
 $link-color: #000000;
 $primary: #c78555;
+
+$md: 767px;
+
+@import 'mixins';

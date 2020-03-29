@@ -87,10 +87,28 @@ $nav-height: calc(100% - #{$header-size + $default-size});
       // background-image: url('./assets/images/home-bg.jpg');
     }
   }
+
+  @include md-and-down() {
+    &__right-nav,
+    &__left-nav,
+    &__footer {
+      display: none;
+    }
+
+    &__content {
+      padding-top: 200px;
+    }
+
+    &__header {
+      flex-direction: column;
+    }
+
+    padding: 0;
+  }
 }
 
 .header {
-  &__logo,
+  &__logo--centered,
   &__link-to-form {
     margin-left: auto;
   }
@@ -101,6 +119,23 @@ $nav-height: calc(100% - #{$header-size + $default-size});
     text-decoration: none;
     color: #000;
 
-    transform: translate(50%);
+    &--centered {
+      transform: translate(50%);
+    }
+  }
+
+  @include md-and-down() {
+    &__logo--centered,
+    &__link-to-form {
+      margin-right: auto;
+    }
+
+    &__logo {
+      margin-bottom: 20px;
+
+      &--centered {
+        transform: translate(0%);
+      }
+    }
   }
 }

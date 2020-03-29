@@ -7,7 +7,9 @@
   </head>
   <body>
     <div class="main-layout">
-      <header class="main-layout__header header"><a href="/">logo</a></header>
+      <header class="main-layout__header header">
+        <a href="/" class="header__logo">Cool logo</a>
+      </header>
       <nav class="main-layout__left-nav left-nav"></nav>
       <main class="main-layout__content main sales">
         <div class="container">
@@ -31,11 +33,19 @@
             </button>
             <p class="form__input-wrap">
               <label class="form__input-label form__input-label-checkbox">
-                <input class="form__input-checkbox" type="checkbox" required />
+                <input
+                  class="form__input-checkbox"
+                  type="checkbox"
+                  required
+                  checked
+                />
                 <span class="form__input-checkbox-text"
                   >I accept the terms</span
                 >
               </label>
+            </p>
+            <p>
+              <div class="form__status"></div>
             </p>
           </form>
           <p>

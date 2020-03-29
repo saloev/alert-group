@@ -5,6 +5,10 @@ $advantages-space: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: $advantages-space;
+
+    @include md-and-down() {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {

@@ -63,6 +63,11 @@ export default {
   }
 
   &-link {
+    transition: 0.3s linear opacity;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 
   &-desc {
