@@ -86,8 +86,7 @@ module.exports = {
         test: /\.(png|svg|jp(e)g)$/,
         loader: 'file-loader',
         options: {
-          name: 'img/[hash].[ext]',
-          publicPath: '../',
+          name: 'img/[name].[ext]',
         },
       },
       {
