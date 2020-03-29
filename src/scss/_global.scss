@@ -75,3 +75,8 @@ a:not([class]) {
     opacity: 0.8;
   }
 }
+
+button,
+input {
+  font-family: inherit;
+}

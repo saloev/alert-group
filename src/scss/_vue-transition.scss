@@ -1,0 +1,26 @@
+.out-left-enter-active,
+.out-left-leave-active,
+.out-right-enter-active,
+.out-right-leave-active {
+  transition: all 0.5s ease;
+}
+
+.out-left-leave-to,
+.out-right-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.out-left-enter,
+.out-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

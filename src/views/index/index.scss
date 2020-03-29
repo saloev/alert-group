@@ -61,7 +61,9 @@ $advantages-space: 20px;
   position: relative;
 
   height: 410px;
+  overflow: hidden;
 
+  border-radius: 10px;
   &__loader {
     display: inline-block;
     position: relative;
